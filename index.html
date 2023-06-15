@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>H. W. relation</title>
+
+</head>
+
+<body>
+
+  <style>
+
+  * {
+
+    margin: 0;
+
+    padding: 0;
+
+  }
+
+  body {
+
+    background-image: url('bgpic.webp');
+
+  background-size: cover; 
+
+    height: 108vh;
+
+    
+
+    background-repeat: no-repeat;
+
+    
+
+  }
+
+  h2 {
+
+    position: absolute;
+
+    width: 100%;
+
+    
+
+    top: 5px;
+
+    left: 10px;
+
+    right: 0px;
+
+    color: black;
+
+    text-shadow: 1px 2px 2px #777;
+
+    
+
+   
+
+  }
+
+  
+
+  
+
+    input, h5, #butt{
+
+      left: 50px;
+
+      top: 30px;
+
+      padding: 5px;
+
+      position: absolute;
+
+      height: 30px;
+
+      width: 70%;
+
+    }
+
+    #w {
+
+      position: absolute;
+
+      padding: 5px;
+
+      top: 80px;
+
+    }
+
+    
+
+    h5{
+
+      position: absolute;
+
+      top: 200px;
+
+      letter-spacing: 1px;
+
+      text-align: center;
+
+      padding-top: 12px;
+
+      margin-top: 5px;
+
+      
+
+      
+
+    }
+
+    
+
+    #butt {
+
+      position: absolute;
+
+      top: 135px;
+
+      left: 53px;
+
+      background-color: rgba(79,245,104,0.809);
+
+      border: none;
+
+      border: 0.5px solid aqua;
+
+      
+
+      font-size: 1em;
+
+      cursor: pointer;
+
+      
+
+    }
+
+    p1, h4, #sbutt{
+
+      position: absolute;
+
+      left: 50px;
+
+      top: 450px;
+
+    }
+
+    p1 {
+
+      top: 510px;
+
+      font-size: 15px;
+
+      right: 15px;
+
+      bottom: 10px;
+
+      
+
+    }
+
+    #sbutt {
+
+      width: 55px;
+
+      height: 30px;
+
+      top: 480px;
+
+      background-color: rgba(157,157,229,0.683);
+
+      cursor: pointer;
+
+      
+
+    }
+
+    h1 {
+
+      position: absolute;
+
+      top: 350px;
+
+      left: 10px;
+
+      width: 100%;
+
+      transform: rotate(-80deg);
+
+      opacity: 0.2;
+
+      letter-spacing: 2px;
+
+    }
+
+    h4 {
+
+      letter-spacing: 1px;
+
+      opacity: 0.7;
+
+    }
+
+    .blur-box {
+
+      width: 300px;
+
+      height: 350px;
+
+      left: 5vh;
+
+      top: 90px;
+
+      border: 1px solid aqua;
+
+      position: absolute;
+
+      background-color: rgba(18,255,211,0.19);
+
+      box-shadow: 0em 0em 1em, 0 0 0.3em #9998;
+
+    }
+
+   
+
+  </style>
+
+  <div class="all">
+
+    
+
+  <h2><b>Pre-Death checker between</b> <br>  husband and wife </h2>
+
+  <div class="blur-box">
+
+    
+
+  <input type="number"  id="h" placeholder="স্বামীর নামের অক্ষর সংখ্যা">
+
+  <input type="number"  id="w" placeholder="স্ত্রীর নামের অক্ষর সংখ্যা" >
+
+  <button id="butt">Check</button>
+
+  <h5></h5>
+
+  
+
+  </div>
+
+  <h4>Learn how to get proper results</h4>
+
+  <button id="sbutt" onclick="details()">Details</button>
+
+  <p1></p1>
+
+  </div>
+
+  <h1>MD. Sarowar Hossain</h1>
+
+  <script>
+
+const button = document.getElementById('butt')
+
+     button.addEventListener('click', () => {
+
+       
+
+  const husband = document.getElementById('h').value;
+
+  const wife = document.getElementById('w').value;
+
+  if(husband == 0 || wife ==0) {document.querySelector('h5').innerText = null;
+
+  }else if(husband >= wife) {
+
+    
+
+    const f = husband+wife;
+
+    const hus = wife*4;
+
+    const mot = hus+f;
+
+    var result = mot%3;
+
+    
+
+    if(result ==0 || result == 1) document.querySelector('h5').innerText = "HUSBAND";document.querySelector('h5').style.border="2px solid red";
+
+    if(result ==2) document.querySelector('h5').innerText = "WIFE";document.querySelector('h5').style.border="2px solid red";
+
+  }else if (wife > husband) {
+
+   const f = husband+wife;
+
+   const hus = husband*4;
+
+    const mot = hus+f;
+
+    var result = mot%3;
+
+    
+
+    if(result ==0 || result == 1) document.querySelector('h5').innerText = "HUSBAND";document.querySelector('h5').style.border="2px solid red";
+
+    if(result ==2) document.querySelector('h5').innerText = "WIFE";document.querySelector('h5').style.border="2px solid red";
+
+  }
+
+  
+
+  
+
+    })
+
+    function details() {
+
+      document.querySelector('p1').innerText= "স্বামীর নামের বক্সে স্বামীর নামের অক্ষর সংখ্যা লিখতে হবে। যেমন, রকিব =3, রেজাউল=4, রনি=2, রঞ্জিত=3, মুস্তাকিম=4, আবদুল্লাহ=5 । উল্লেখ্য যে, যুক্তবর্ণগুলোও একটি অক্ষর হিসেবে গণ্য হবে । স্ত্রীর নামের বক্সে স্ত্রীর নামের সংখ্যা একইভাবে লিখতে হবে । তারপর check বাটনে ক্লিক করলেই উত্তর দেখাবে ঐ দুই জন স্বামী-স্ত্রীর মধ্যে কে আগে মারা গেছেন/যাবেন ।    বি.দ্র. : এখানে দেখানো ফলাফল শতভাগ নিশ্চিত নাও হতে পারে, কারণ সৃষ্টির নিয়মকে পরিবর্তন করার ক্ষমতা সৃষ্টিকর্তার আছে ।" 
+
+    }
+
+    
+
+    
+
+  </script>
+
+  
+
+</body>
+
+</html>
